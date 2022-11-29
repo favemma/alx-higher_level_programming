@@ -2,6 +2,6 @@
 
 for x in range(122, 96, -1):
     if x % 2 != 0:
-            print("{}".format(chr(x - 32)), end="")
+        print("{}".format(chr(x - 32)), end="")
     else:
-            print("{}".format(chr(x)), end="")
+        print("{}".format(chr(x)), end="")
