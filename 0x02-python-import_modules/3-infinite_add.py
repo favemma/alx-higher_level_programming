@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 import sys
 
+
 def main(*argv):
 
-    l = len(sys.argv)
+    a = len(sys.argv)
 
     sum = 0
 
-    if l > 1:
+    if a > 1:
 
         for args in sys.argv:
 
@@ -16,6 +17,7 @@ def main(*argv):
                 sum = sum + int(args)
 
     print(sum)
+
 
 if __name__ == "__main__":
 

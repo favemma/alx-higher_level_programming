@@ -6,19 +6,19 @@ def main(*argv):
 
     i = 0
 
-    l = len(sys.argv) - 1
+    a = len(sys.argv) - 1
 
-    if l == 1:
+    if a == 1:
 
-        print("{:d} argument:".format(l))
+        print("{:d} argument:".format(a))
 
-    elif l == 0:
+    elif a == 0:
 
-        print("{:d} arguments.".format(l))
+        print("{:d} arguments.".format(a))
 
     else:
 
-        print("{:d} arguments:".format(l))
+        print("{:d} arguments:".format(a))
 
     for args in sys.argv:
 
@@ -27,6 +27,7 @@ def main(*argv):
             print("{}: {}".format(i, args))
 
         i += 1
+
 
 if __name__ == "__main__":
 
