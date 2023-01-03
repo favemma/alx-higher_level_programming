@@ -1,7 +1,6 @@
 #!/usr/bin/python3
+def magic_string(listy=[]):
 
-def magic_string(H=[]):
+    listy += ["BestSchool"]
 
-    H += ["BestSchool"]
-
-        return (", ".join(H))
+        return ", ".join(listy)
