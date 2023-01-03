@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-def magic_string(list=[]):
-    list.append("Holberton, ")
-        return ("".join(list))[:-2]
+def repeat(word, n, delim):
+    print(*n*[word], sep=delim)
+
+
+def repeat(word, n, delim):
+    print(delim.join(word for _ in range(n)))
+
+
+
+
