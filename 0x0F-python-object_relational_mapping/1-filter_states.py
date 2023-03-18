@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Get all states of a data base
+    Get the states begin by N of a data base
 """
 import MySQLdb
 from sys import argv
@@ -14,7 +14,11 @@ def main():
                          passwd=argv[2],
                          db=argv[3])
     c = db.cursor()
-    numrows = c.execute("""SELECT * FROM states ORDER BY states.id ASC""")
+    command = """SELECT *
+                 FROM states
+                 WHERE states.name LIKE BINARY 'N%'
+                 ORDER BY states.id ASC"""
+    numrows = c.execute(command)
     states = c.fetchall()
     for idstate in states:
         print(idstate)
