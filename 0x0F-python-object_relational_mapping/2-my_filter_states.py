@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Get the states begin by N of a data base
+    Get the states begin by user input of a data base
 """
 import MySQLdb
 from sys import argv
@@ -16,8 +16,9 @@ def main():
     c = db.cursor()
     command = """SELECT *
                  FROM states
-                 WHERE states.name LIKE BINARY 'N%'
+                 WHERE BINARY states.name = '{}'
                  ORDER BY states.id ASC"""
+    command = command.format(argv[4])
     numrows = c.execute(command)
     states = c.fetchall()
     for idstate in states:
